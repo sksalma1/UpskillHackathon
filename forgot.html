@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            border:1px solid gray;
+            width:40%;
+            height:auto;
+            margin:auto;
+            background-color: white;
+        }
+        .form{
+            margin-bottom: 20px;
+        }
+        .input{
+            margin:auto;
+            display: block;
+            width: 90%;
+            padding: 3px;
+            margin-top:5px;
+            font-size: 1rem;
+            line-height: 2.5;
+            color: #495057;
+            background-color: rgb(249, 247, 247);
+            background-clip: padding-box;
+            border: 1px solid black;
+            border-radius: 0.25rem;
+        }
+        label{
+            font-size:20px;
+            padding:20px
+        }
+        .a{
+            font-size:20px;
+            float: right;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body style="background-color:#495057">
+    <div class="container1" style="margin-top:70px;">
+        <a href="Login.html" class="a" align="right">&#10005;</a>
+        <h2 style="margin-left:20px;text-align:center">Forgot Password</h2>
+        <form action="" method="post">
+            <div class="form">
+                <label for="email"><b>Username or Email</b></label>
+                <input type="email" class="input" name="email" required>
+            </div>
+        </form>
+        <div class="form">
+            <button type="submit" class="input" style="margin-top:20px;color:white;background-color:goldenrod">Forgot Password</button>
+        </div>
+    </div>
+</body>
+</html>

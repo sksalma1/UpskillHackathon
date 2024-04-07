@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eagle Mentoring</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .logo img {
+            max-height: 80px;
+            width:120px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links ul li {
+            margin-right: 20px;
+        }
+
+        .faculty-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .faculty-box {
+            width: 200px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faculty-box img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size:15px
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+    </style>
+    <script>
+        /* JavaScript functionality */
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add JavaScript functionality here if needed
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div style="display:flex">
+                <div class="logo">
+                    <img src="logo.jpg" alt="Eagle Mentoring Logo">
+                </div>
+                <div>
+                    <h2 style="color: rgb(231, 214, 113);margin-left:10px">EAGLE MENTORING</h2>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <form action="search.php" method="get">
+                            <input type="text" placeholder="Search Course" name="course_search" style="border-radius:5px;font-size:20px;height:30px">
+                            <input type="submit" value="Search">
+                        </form>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button onclick="toggleDropdown()" class="dropbtn">My Account</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="profile.html">Profile</a>
+                                <a href="connection.html">My Courses</a>
+                                <a href="mainpage.html">Main Page</a>
+                                <a href="Login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <br><br>
+    <main>
+        <div class="faculty-section">
+            <div class="faculty-box">
+                <div class="faculty-details">
+                    <img src="p-1.jpg" alt="Faculty 1">
+                    <h3>John</h3>
+                    <p>DATA SCIENCE</p>
+                    <p>Msc DataScience</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-2.jpg" alt="Faculty 2">
+                <div class="faculty-details">
+                    <h3>Charan</h3>
+                    <p>BIG DATA</p>
+                    <p>M.Tech</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-3.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Alexa</h3>
+                    <p>Cyber</p>
+                    <p>Msc</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-5.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Jenny</h3>
+                    <p>Python</p>
+                    <p>Btech from IIT</p>
+                </div>
+            </div>
+        </div>
+        <div class="faculty-section">
+            <div class="faculty-box">
+                <img src="p-6.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Elina</h3>
+                    <p>UI/UX</p>
+                    <p>BSC Computer science</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-8.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Rahul</h3>
+                    <p>AIML</p>
+                    <p>PHD AIML</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-9.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Jitesh</h3>
+                    <p>Maths</p>
+                    <p>Msc Mathamatics</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-10.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Usha</h3>
+                    <p>AIML</p>
+                    <p>M.Tech</p>
+                </div>
+            </div>
+        </div>
+        <div class="faculty-section">
+            <div class="faculty-box">
+                <img src="p-11.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Abinash</h3>
+                    <p>VLSI</p>
+                    <p>M.Tech ECE</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-12.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Rohit</h3>
+                    <p>DAA</p>
+                    <p>Btech</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-13.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Ajay</h3>
+                    <p>DBMS</p>
+                    <p>M.Tech</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-14.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Salma</h3>
+                    <p>Java</p>
+                    <p>PHD</p>
+                </div>
+            </div>
+       </div>
+       <div class="faculty-section">
+        <div class="faculty-box">
+            <img src="p-15.jpg" alt="Faculty 1">
+            <div class="faculty-details">
+                <h3>Vijayakrishna</h3>
+                <p>C++</p>
+                <p>Bsc Computer science</p>
+            </div>
+        </div>
+        <div class="faculty-box">
+            <img src="p-16.jpg" alt="Faculty 1">
+            <div class="faculty-details">
+                <h3>Satya</h3>
+                <p>R language</p>
+                <p>B.com</p>
+            </div>
+        </div>
+        <div class="faculty-box">
+            <img src="p-17.jpg" alt="Faculty 1">
+            <div class="faculty-details">
+                <h3>Kathikeyan</h3>
+                <p>IOT</p>
+                <p>Msc</p>
+            </div>
+        </div>
+        <div class="faculty-box">
+            <img src="p-18.jpg" alt="Faculty 1">
+            <div class="faculty-details">
+                <h3>Amit</h3>
+                <p>Chemistry</p>
+                <p>MSC chemistry</p>
+            </div>
+        </div>
+        </div>
+        <div class="faculty-section">
+            <div class="faculty-box">
+                <img src="p-19.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Pardha Kumar</h3>
+                    <p>Biology</p>
+                    <p>Bio Technology</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-21.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Sabyasachi</h3>
+                    <p>History</p>
+                    <p>Degree HEC</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-20.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Lakshmi Narayana Pathro</h3>
+                    <p>Physics</p>
+                    <p>PHD</p>
+                </div>
+            </div>
+            <div class="faculty-box">
+                <img src="p-22.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Pradyut</h3>
+                    <p>Web development</p>
+                    <p>MSC</p>
+                </div>
+            </div>
+       </div>
+    </main>
+
+    <script>
+        // JavaScript code
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add JavaScript functionality here if needed
+        });
+    </script>
+    <script>
+        // Function to toggle the visibility of the dropdown menu
+        function toggleDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

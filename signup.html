@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            border:1px solid gray;
+            width:40%;background-color: white;
+            height:550px;
+            margin:auto;
+        }
+        .container{
+            width:100%;
+            height:auto;
+            display: flex;
+            margin:auto;
+        }
+        .div1{
+            width:50%;
+            text-align: center;
+        }
+        #div2{
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: lightgray;
+        }
+        .form{
+            margin-bottom: 20px;
+        }
+        .input{
+            margin:auto;
+            display: block;
+            width: 90%;
+            padding: 3px;
+            margin-top:5px;
+            font-size: 1rem;
+            line-height: 2.5;
+            color: #495057;
+            background-color:rgb(249, 247, 247);
+            background-clip: padding-box;
+            border: 1px solid black;
+            border-radius: 0.25rem;
+        }
+        label{
+            font-size:20px;
+            padding:20px
+        }
+        .show{
+            margin-left: 20px;
+        }
+        .btn{
+            margin-top:20px;
+            font-size:20px;
+            padding:15px;
+            width: 100%;
+        }
+        .flex{
+            width: 100%;
+            display: flex;
+        }
+        .btn{
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="background-color:#495057">
+    <div class="container1" style="margin-top:70px;">
+        <div class="container">
+            <div class="div1"><a href="Login.html"><button><h1>SIGN IN</h1></button></a></div>
+            <div class="div1"><a href="signup.html"><button><h1>SIGN UP</h1></button></a></div>
+        </div><br>
+        <p style="margin-left:20px">Please fill in this form to create an account.</p>
+        <form action="signup_process.php" method="post">
+            <div class="form">
+                <label for="email"><b>Username or Email</b></label>
+                <input type="email" class="input" name="email" placeholder="Enter Username or Email" required>
+            </div>
+            <div class="form" id="passwordSection">
+                <label for="password" style><b>Create Password</b></label>
+                <input type="password" class="input" name="password" id="password" placeholder="Enter Password" title="Password should contain at least 8 characters" required>
+                <br><label for="password" style><b>Confirm Password</b></label>
+                <input type="password" class="input" name="confirmpassword" id="confirmPassword" placeholder="Confirm Password" required><br>
+                <input type="checkbox" value="showpassword" onclick="show()" class="show">Show password
+            </div>
+            <div class="form">
+                <form action="signup_process.php" method="post">
+                <input type="submit" name="signup" value="submit" class="input" onsubmit="return checkPassword()" style="margin-top:20px;color:white;background-color:green">
+            </form>
+            </div>
+        </form>
+        <script>
+            function show(){
+                var createPasswordInput = document.getElementById('password');
+                var confirmPasswordInput = document.getElementById('confirmPassword');
+                if(createPasswordInput.type === 'password'||confirmPasswordInput.type === 'confirmPassword'){
+                    createPasswordInput.type = 'text';
+                    confirmPasswordInput.type = 'text';
+                }
+                else{
+                    createPasswordInput.type = 'password';
+                    confirmPasswordInput.type = 'password';
+                }
+            }
+            function checkPassword(){
+                var enteredPassword = document.getElementById('password').value;
+                var storedPassword = "yourStoredPassword";
+                var errorMessage = document.getElementById('errorMessage');
+                if(enteredPassword !== storedPassword){
+                    errorMessage.textContent = "Incorrect password. Please enter the correct password.";
+                    return false;
+                }
+                errorMessage.textContent = "";
+                return true;
+            }
+        </script>
+    </div>
+</body>
+</html>

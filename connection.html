@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connection</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+    
+        .logo img {
+            max-height: 80px;
+            width: 120px;
+        }
+    
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .nav-links ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+    
+        .nav-links ul li {
+            margin-right: 20px;
+        }
+    
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .faculty-box {
+            padding-left: 200px;
+            width: 200px;
+            margin-top:25px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faculty-box img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body style="background-color: beige;">
+    <header>
+        <nav>
+            <div style="display:flex">
+                <div class="logo">
+                    <img src="logo.jpg" alt="Eagle Mentoring Logo">
+                </div>
+                <div>
+                    <h2 style="color: rgb(231, 214, 113);margin-left:10px">EAGLE MENTORING</h2>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <div class="dropdown">
+                            <button onclick="toggleDropdown()" class="dropbtn">My Account</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="profile.html">Profile</a>
+                                <a href="connection.html">My Courses</a>
+                                <a href="mainpage.html">Main Page</a>
+                                <a href="Login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header><br>
+    
+    <div style="display:flex">
+        <div style="width:250px;height:190px;margin-left:80px">
+            <h3 style="background-color:yellow;border-radius:20px;font-size:23px;text-align:center">EAGLE MENTORING</h3>
+            <img src="uiux_image.png" width="250px" height="140px" style="margin-top:-22px;border-radius:20px">
+            <p style="text-align:center;font-size:20px">UI/UX Design</p>
+        </div>
+            <div class="faculty-box">
+                <img src="p-6.jpg" alt="Faculty 1">
+                <div class="faculty-details">
+                    <h3>Elina</h3>
+                    <p>UIUX</p>
+                    <p>BSC Computer science</p>
+                </div>
+            </div>
+    </div>
+
+    <div style="display:flex">
+        <div style="width:250px;height:190px;margin-left:80px">
+            <h3 style="font-family: 'Times New Roman', Times, serif;background-color:yellow;border-radius:20px;font-size:23px;text-align:center">EAGLE MENTORING</h3>
+            <img src="aiml.jpg" width="250px" height="140px" style="margin-top:-22px;border-radius:20px">
+            <p style="text-align:center;font-size:20px">AIML</p>
+        </div>
+        <div class="faculty-box">
+            <img src="p-8.jpg" alt="Faculty 1">
+            <div class="faculty-details">
+                <h3>Rahul</h3>
+                <p>AIML</p>
+                <p>Phd AIML</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle the visibility of the dropdown menu
+        function toggleDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
